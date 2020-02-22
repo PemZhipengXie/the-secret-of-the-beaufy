@@ -1,6 +1,5 @@
 /*
 Author: Pem Zhipeng Xie
-SID: 440587837
 Name: Muisc Bubbles
 
 
@@ -37,7 +36,7 @@ var speed;
 
 
 function preload() {
-    sound = loadSound('y2mate.com - timmy_trumpet_savage_freaks_official_video_ofmzX1nI7SE.mp3');
+    sound = loadSound('[No Copyright Music] Journey - Jay Hifive & Broken Elegance.mp3');
 }
 
 
