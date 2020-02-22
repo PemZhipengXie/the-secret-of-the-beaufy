@@ -36,7 +36,7 @@ var speed;
 
 
 function preload() {
-    sound = loadSound('[No Copyright Music] Journey - Jay Hifive & Broken Elegance.mp3');
+    sound = loadSound(' [No Copyright Music] Journey - Jay Hifive & Broken Elegance.mp3 ');
 }
 
 
