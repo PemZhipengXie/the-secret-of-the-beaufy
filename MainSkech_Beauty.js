@@ -43,7 +43,7 @@ function preload() {
 
 
 function setup() {
-    createCanvas(1280, 760);
+    createCanvas(windowWidth, windowHight);
     sound.loop();
     amplitude = new p5.Amplitude();
 
@@ -62,48 +62,20 @@ function draw() {
 
 
     //slider 
-    stroke(233, 2, 146, 90);
-    strokeWeight(2);
-    line(a, 270, b, 270, 90);
-    stroke(74, 224, 242, 90);
-    fill(255);
-    var r = dist(xFlower, 270, mouseX, mouseY);
 
-    if (mouseIsPressed == true && r <= 40 && mouseX <= b && mouseX >= a) {
-        xFlower = mouseX;
-    }
-    rectMode(CENTER);
-    rect(xFlower, 270, 40, 40);
-    zoom = map(xFlower, a, b, 0.4, 30);
-    textSize(18);
-    noStroke();
-    text("Zoom", a + 120, 310);
-    textSize(10);
-    text("UNIVERSE", a, 310);
-    text("GENE", b - 35, 310);
+ 
+   
+
+     xFlower = mouseX;
 
 
-    //goCrazy
-    if (goCrazy > 2) {
-        goCrazy = 1;
-    }
-
-    if (goCrazy == 1) {
-        stroke(74, 224, 242, 90);
-        fill(255);
+    zoom = map(xFlower, 0, width, 0.4, 30);
+ 
 
 
-    } else if (goCrazy == 2) {
-        stroke(233, 2, 146, 90);
-        fill(74, 224, 242);
-    }
-    rect(1000, 400, 100, 100);
-    noStroke();
-    fill(255);
-    textFont("Arial");
-    textSize(16);
-    textAlign(LEFT, CENTER);
-    text('GO CRAZY', width - 320, 400);
+  
+
+ 
 
     var level = amplitude.getLevel();
 
@@ -211,9 +183,3 @@ function draw() {
 
 }
 
-//click then swith to crzay mode
-function mouseClicked() {
-
-    goCrazy += 1;
-
-}
